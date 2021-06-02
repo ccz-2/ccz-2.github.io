@@ -91,7 +91,10 @@
 							<header>
 								<h2>VeraSurgical</h2>
 								<p>Laparoscopic Fascia Closure Device</p>
-								<iframe width="562" height="449" src="https://www.youtube.com/embed/ACyTclMnM0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<span class="image fit">
+									<iframe src="https://www.youtube.com/embed/ACyTclMnM0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</span>
+
 							</header>
 						</div>
 
@@ -368,5 +371,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/jquery.fitvids.js"></script>
+			<script>
+			  $(document).ready(function(){
+			    // Target your .container, .wrapper, .post, etc.
+			    $("#vs, #syringe").fitVids();
+			  });
+			</script>
 	</body>
 </html>
