@@ -45,8 +45,8 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="bladder_flap">
 						<div class="content">
 							<h2>Robotic Bladder Flap Posterior Urethroplasty for Recalcitrant Bladder Neck Contracture and Vesicourethral Anastomotic Stenosis</h2>
-							<p>Presented at the American Urological Association 2021 Annual Meeting</br>Featuring 3D animation of procedure with intraoperative footage</p>
-							<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/598651057?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dc94c6c738" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Robotic Bladder Flap Posterior Urethroplasty for Recalcitrant BNC and VUAS"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+							<p>Presented at the American Urological Association 2021 Annual Meeting</br>Featuring a <b><a href="javascript:playFlapAnim();">3D animation of the procedure</a></b> with intraoperative footage</p>
+							<div style="padding:56.25% 0 0 0;position:relative;"><iframe id="flap_video" src="https://player.vimeo.com/video/598651057?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=dc94c6c738" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Robotic Bladder Flap Posterior Urethroplasty for Recalcitrant BNC and VUAS"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 						</div>
 						<div class="image">
 							<img src="img/bladder_flap.jpg" alt="" />
@@ -411,19 +411,19 @@
 
 						<div class="gallery style2 medium lightbox onload-fade-in">
 							<article>
-								<a href="img\diorama\IMG_0053.jpg" class="image">
-									<img src="img\diorama\IMG_0053.jpg" alt="" />
-								</a>
-								<div class="caption">
-									<h3>Diorama with 3D printed buildings and laser cut road/water inlay</h3>
-								</div>
-							</article>
-							<article>
 								<a href="img\diorama\IMG_0060_2.gif" class="image">
 									<img src="img\diorama\IMG_0060_2.gif" alt="" />
 								</a>
 								<div class="caption">
 									<h3>Diorama with animated sunrise/sunset lighting</h3>
+								</div>
+							</article>
+							<article>
+								<a href="img\diorama\IMG_0053.jpg" class="image">
+									<img src="img\diorama\IMG_0053.jpg" alt="" />
+								</a>
+								<div class="caption">
+									<h3>Diorama with 3D printed buildings and laser cut road/water inlay</h3>
 								</div>
 							</article>
 							<article>
@@ -497,8 +497,14 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/jquery.fitvids.js"></script>
+			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
-
+				function playFlapAnim() {
+					var iframe = $("#flap_video")
+					var player = new Vimeo.Player(iframe)
+					player.setCurrentTime(93)
+					player.play()
+				}
 			</script>
 	</body>
 </html>
